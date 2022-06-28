@@ -1,1 +1,2 @@
-# china_name_generator
+# about
+This code generate text like 口几仨厂

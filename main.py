@@ -1,6 +1,6 @@
 import sqlite3 as sq
 
-text = input("Enter any text")
+text = input("Enter any text: ").upper()
 cur = sq.connect('db.db').cursor()
 keys = cur.execute("SELECT * FROM keys").fetchall()
 
@@ -8,5 +8,5 @@ if text == "":
 	print("\nPlease try again and enter any text")
 	exit()
 for k in keys:
-	text.replace(k[0], k[1])
+	text = text.replace(k[0], k[1])
 print(text)
